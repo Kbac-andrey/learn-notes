@@ -16,3 +16,5 @@ npm install
  ```
 parcel src/index.html
 ```
+
+#### Open http://localhost:1234/ in your browser.
