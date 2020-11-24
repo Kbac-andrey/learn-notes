@@ -1,0 +1,14 @@
+{
+  "name": "learn-notes",
+  "version": "1.0.0",
+  "description": "Play and learn notes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@tonaljs/tonal": "^4.6.0"
+  }
+}
