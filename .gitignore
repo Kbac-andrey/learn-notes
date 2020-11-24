@@ -1,0 +1,14 @@
+# compiled output
+/dist
+
+# dependencies
+/node_modules
+
+
+# misc
+/connect.lock
+npm-debug.log*
+testem.log
+/**/.DS_Store
+.cache
+.idea/
