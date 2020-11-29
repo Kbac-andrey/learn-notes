@@ -3,11 +3,13 @@ import { mapNotes } from '../elements/notes';
 import { app } from '../index';
 const checkRightAnswer = (frequency) => {
   if (frequency && frequency > 0) {
+    let rightAnswer;
     let shownNoteText = app.requiredNote;
     let noteFromFreq = removeOkt(Note.fromFreq(frequency));
     let note = findTheClosest(mapNotes.notesWithPossibleFrequency, frequency);
     mapNotes.notesWithPossibleFrequency.forEach(noteElement => {
-      if (noteFromFreq == noteElement.note && note.note == noteFromFreq && noteFromFreq == shownNoteText) {
+      rightAnswer = noteFromFreq == noteElement.note && note.note == noteFromFreq && noteFromFreq == shownNoteText;
+      if (rightAnswer) {
         document.querySelectorAll('.fret.active').forEach(fret => {
           fret.classList.remove('active');
         });
@@ -15,6 +17,7 @@ const checkRightAnswer = (frequency) => {
           fret.classList.add('active');
         });
         app.gameVariables.scoreCounter.innerHTML = `${app.score + 1}`;
+
         app.showNotes();
       }
     })
